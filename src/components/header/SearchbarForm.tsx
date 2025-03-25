@@ -146,7 +146,7 @@ function SearchForm({
         htmlFor="search"
         className="lg:flex items-center w-full"
       >
-        <div className="flex items-center w-full h-full bg-neutral-100 rounded-lg dark:bg-neutral-700">
+        <div className="flex items-center w-full h-full bg-neutral-100 rounded-lg">
           {isOpen ? (
             <ArrowRight
               onClick={(e) => {
@@ -171,7 +171,7 @@ function SearchForm({
         </div>
         {/* Search Menu */}
         <div
-          className={`overflow-y-auto overflow-x-hidden max-h-screen lg:absolute transition-all duration-700 ease-in-out lg:shadow top-0 lg:border right-0 w-full bg-white rounded-lg p-4 max-lg:pb-20
+          className={`dark:bg-neutral-700 overflow-y-auto overflow-x-hidden max-h-screen lg:absolute transition-all duration-700 ease-in-out lg:shadow top-0 lg:border right-0 w-full bg-white rounded-lg p-4 max-lg:pb-20
             ${isShowSearchMenu ? "opacity-100 visible" : "opacity-0 invisible"}
           `}
         >
@@ -247,8 +247,8 @@ function SearchForm({
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext className="right-[30rem] -top-7 !opacity-100 !bg-white" />
-            <CarouselPrevious className="-left-1 -top-7 !opacity-100 !bg-white" />
+            <CarouselNext className="right-[30rem] -top-7 !opacity-100 bg-white dark:bg-neutral-700" />
+            <CarouselPrevious className="-left-1 -top-7 !opacity-100 bg-white dark:bg-neutral-700" />
           </Carousel>
         </div>
       </label>
